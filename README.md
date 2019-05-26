@@ -1,5 +1,26 @@
 # ChatBot Using Rasa Stack/Framework
-A chatbot using Rasa framework has been built. It would be implemented on CREST ERP product to help customers fetch the relevant information easily and quickly.
+A chatbot using Rasa framework has been built. It is an assignment chabot project to help customers book flight tickets easily and quickly.
+Here, I was facing some issues with importing JSON data into rasa, mainly due to some version issues. So, I have imported json file to Postgresql and then I have fetched relevant information from Postgresql. 
+Due to time limitation, I could not implement it on Flask but I can do it. Other issue is that, I have excluded some of the requirements from this chatbot like: giving options to the users to opt for cheaper/faster way, date range, etc.
+Now, it can only process/ answer questions if it has departure airport, destination airport and date of departure available.
+I have not added excetion handling as well. These all are the issues which could be handled given more time. But, since I am busy on weekdays with my current organization's workload so I could do only this much. 
+Please feel free to reach me if you have any doubts.
+We can definitely make it robust, like it would handle date in any format, it ask for user details before confirmation, it may ask for payment methods and details, etc.
+I have also shared a screenshot of postgresql console where I have shown how I have stored it there ('DataStoredInPostgres.png').
+
+### Example Conversation
+
+```
+User: Hi, I want to book a flight ticket from Kochi to Pune on 30/08/2019.
+Bot will show a dictionary with relevant info and will ask the user to type the index number to book the flight.
+User: 24
+Bot will show a confirmation of booked ticket with reference number.
+User: Thanks
+Bot will ask if you need to book more tickets.
+User: Nope
+Bot: Happy to serve you.
+
+```
 
 ### Version of Python used is 3.6.0
 
@@ -62,7 +83,7 @@ python nlu_model.py
 
 #### To train Rasa-Core
 ```
-python -m rasa_core.train -d crestbot_domain.yml -s data/stories.md -o models/dialogue/ -c policy_config.yml
+python -m rasa_core.train -d chatbot_domain.yml -s data/stories.md -o models/dialogue/ -c policy_config.yml
 
 ```
 
@@ -72,14 +93,14 @@ python -m rasa_core_sdk.endpoint --actions action
 
 ```
 
-#### To run the app
+#### To run the bot on command line (in run mode)
 ```
-python app.py
+python -m rasa_core.run -d models/dialogue -u models/nlu/default/chatbotnlu --endpoints endpoints.yml --debug
 
 ```
 
-#### To run the bot on command line
+#### To run the bot on command line (in debug mode)
 ```
-python -m rasa_core.run -d models/dialogue -u models/nlu/default/cresterpbotnlu --endpoints endpoints.yml --debug
+python -m rasa_core.run -d models/dialogue -u models/nlu/default/chatbotnlu --endpoints endpoints.yml --debug
 
 ```
