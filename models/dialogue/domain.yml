@@ -1,0 +1,113 @@
+%YAML 1.1
+---
+actions:
+- utter_help
+- utter_ask_departure
+- utter_ask_destination
+- utter_ask_date
+- utter_ask_name
+- utter_ask_mobile
+- utter_ask_id_number
+- utter_ask_connecting
+- utter_goodbye
+- action_book_ticket
+- action_show_ticket
+- utter_ask_row
+- utter_ask_anything_else
+- action_default_fallback
+- utter_default
+- action_renew
+config:
+  store_entities_as_slots: true
+entities:
+- departure
+- destination
+- date
+- connection
+- name
+- mobile_number
+- id_number
+- row_no
+forms: []
+intents:
+- greet:
+    use_entities: true
+- bye:
+    use_entities: true
+- ticket_book:
+    use_entities: true
+- thanks:
+    use_entities: true
+- affirmative:
+    use_entities: true
+- negative:
+    use_entities: true
+- ticket_number:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- inform:
+    use_entities: true
+slots:
+  connection:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  date:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  departure:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  destination:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  id_number:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  matches:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  mobile_number:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  row_no:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask_anything_else:
+  - text: Would you like to book more tickets?
+  utter_ask_connecting:
+  - text: Would you like to book a connecting flight? It would be cheaper and will
+      take more time than direct flights.
+  utter_ask_date:
+  - text: On which date would you like to book it?
+  utter_ask_departure:
+  - text: Which is your departure airport?
+  utter_ask_destination:
+  - text: Which is your destination airport?
+  utter_ask_id_number:
+  - text: What is your id number?
+  utter_ask_mobile:
+  - text: What is your mobile number?
+  utter_ask_name:
+  - text: What is your name?
+  utter_ask_row:
+  - text: 'Please type the row number as indicated, Example: 1. Thanks!'
+  utter_default:
+  - text: Sorry, could not find anything relevant.
+  utter_goodbye:
+  - text: Happy to serve you. See you soon!
+  utter_help:
+  - text: How can I help you?

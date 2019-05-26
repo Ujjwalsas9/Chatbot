@@ -1,0 +1,21 @@
+For rasa_nlu:
+---------------
+python nlu_model.py
+
+
+For rasa core:
+---------------
+python -m rasa_core.train -d chatbot_domain.yml -s data/stories.md -o models/dialogue/ -c policy_config.yml
+
+
+To run the action server:
+--------------------------------
+python -m rasa_core_sdk.endpoint --actions action
+
+For rasa core in run mode:
+--------------------------------
+python -m rasa_core.run -d models/dialogue -u models/nlu/default/chatbotnlu --endpoints endpoints.yml
+
+For rasa core in debug mode:
+--------------------------------
+python -m rasa_core.run -d models/dialogue -u models/nlu/default/chatbotnlu --endpoints endpoints.yml --debug

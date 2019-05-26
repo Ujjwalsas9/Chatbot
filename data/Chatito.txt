@@ -1,0 +1,180 @@
+// How much do they need to pay to the given organization
+%[ticket_book]('training': '400', 'testing': '400')
+    ~[greet], I want to book a flight ticket.
+    I want to book a flight ticket.
+    ~[greet], I wanna book a flight ticket.
+    I wanna book a flight ticket.
+    ~[greet], I want to book a flight ticket from @[departure] to @[destination].
+    I want to book a flight ticket from @[departure] to @[destination].
+    ~[greet], I wanna book a flight ticket from @[departure] to @[destination].
+    I wanna book a flight ticket from @[departure] to @[destination].
+    ~[greet], I want to book a flight ticket from @[departure] to @[destination] on @[date].
+    I want to book a flight ticket from @[departure] to @[destination] on @[date].
+    ~[greet], I wanna book a flight ticket from @[departure] to @[destination] on @[date].
+    I wanna book a flight ticket from @[departure] to @[destination] on @[date].
+    ~[greet], I want to book a flight ticket from @[departure] to @[destination] between @[date] and @[date].
+    I want to book a flight ticket from @[departure] to @[destination] between @[date] and @[date].
+    ~[greet], I wanna book a flight ticket from @[departure] to @[destination] between @[date] and @[date].
+    I wanna book a flight ticket from @[departure] to @[destination] between @[date] and @[date].
+    ~[greet], I want to book a flight ticket from @[departure].
+    I want to book a flight ticket from @[departure].
+    ~[greet], I wanna book a flight ticket from @[departure].
+    I wanna book a flight ticket from @[departure].
+%[inform]('training': '200', 'testing': '200')
+    @[departure]
+    from @[departure]
+    @[destination]
+    to @[destination]
+    from @[departure] to @[destination]
+    on @[date]
+    between @[date] and @[date]
+    from @[departure] to @[destination] on @[date]
+    from @[departure] to @[destination] between @[date] and @[date]
+    @[name]
+    My name is @[name]
+    @[mobile_number]
+    @[id_number]
+
+%[greet]('training': '2', 'testing': '1')
+    ~[greet]
+
+// User says goodbye
+%[bye]('training': '2', 'testing': '1')
+    ~[bye]
+
+// User says thanks
+%[thanks]('training': '2', 'testing': '1')
+    ~[thanks]
+
+// User says yes
+%[affirmative]('training': '2', 'testing': '1')
+    ~[yes]
+
+// User says no
+%[negative]('training': '2', 'testing': '1')
+    ~[no]
+
+~[yes]
+    yes
+    yep
+    yeah
+    yea
+    yepp
+    yo
+
+~[no]
+    no
+    nah
+    nope
+
+~[bye]
+    bye
+    goodbye
+    bye
+    ciao
+
+~[greet]
+    hey
+    hi
+    hello
+    heya
+    hiya
+    namaste
+    hola
+    bonjour
+    greetings
+
+~[thanks]
+    thanks
+    ok thanks
+    ok, thanks
+    thank you so much
+    thank you very much
+    okay
+
+@[departure]
+    Bengaluru
+    Bangalore
+    New Delhi
+    New York
+    Kolkata
+    India
+    Pakistan
+    Kabul
+    London
+    Paris
+    Chennai
+    Singapore
+    Tirupathi
+    Bangalore
+    Delhi
+    Goa
+    Kochi
+    Mumbai
+    Pune
+    Madurai
+
+@[destination]
+    Bengaluru
+    Bangalore
+    New Delhi
+    New York
+    Kolkata
+    India
+    Pakistan
+    Kabul
+    London
+    Paris
+    Chennai
+    Singapore
+    Tirupathi
+    Bangalore
+    Delhi
+    Goa
+    Kochi
+    Mumbai
+    Pune
+    Madurai
+
+@[date]
+    12/03/2019
+    12/04/2019
+    13/05/2019
+    03/10/2019
+    31/12/2019
+    01/07/2021
+    05/05/2020
+
+@[name]
+    Ujjwal Anand
+    Utsav Anand
+    Rahul Kumar
+    Anantha Balaji D.
+    D. Jyothsna Rachel Vas
+    Libin Cheruvayathur
+    Tushar Banerji
+    Amit Banerji
+
+@[mobile_number]
+    9128292921
+    9128292922
+    9128292923
+    9128292924
+    9128292925
+    9128292601
+    9128292602
+    9128292603
+    9128292604
+    9128292605
+
+@[id_number]
+    1234562
+    1929899
+    192989893898
+    1982981928
+    192981928
+    991298829
+    918298192
+    878729910
+    1029399298
+

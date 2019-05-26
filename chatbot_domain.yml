@@ -1,0 +1,84 @@
+slots:
+  departure:
+    type: text
+  destination:
+    type: text
+  connection:
+    type: text
+  date:
+    type: text
+  name:
+    type: text
+  mobile_number:
+    type: text
+  id_number:
+    type: text
+  row_no:
+    type: text
+  matches:
+    type: unfeaturized
+
+intents:
+ - greet
+ - bye
+ - ticket_book
+ - thanks
+ - affirmative
+ - negative
+ - ticket_number
+ - out_of_scope
+ - inform
+
+entities:
+ - departure
+ - destination
+ - date
+ - connection
+ - name
+ - mobile_number
+ - id_number
+ - row_no
+
+templates:
+  utter_help:
+    - 'How can I help you?'
+  utter_ask_departure:
+    - 'Which is your departure airport?'
+  utter_ask_destination:
+    - 'Which is your destination airport?'
+  utter_ask_date:
+    - 'On which date would you like to book it?'
+  utter_ask_name:
+    - 'What is your name?'
+  utter_ask_mobile:
+    - 'What is your mobile number?'
+  utter_ask_connecting:
+    - 'Would you like to book a connecting flight? It would be cheaper and will take more time than direct flights.'
+  utter_ask_anything_else:
+    - 'Would you like to book more tickets?'
+  utter_ask_id_number:
+    - 'What is your id number?'
+  utter_goodbye:
+    - 'Happy to serve you. See you soon!'
+  utter_ask_row:
+    - 'Please type the row number as indicated, Example: 1. Thanks!'
+  utter_default:
+    - 'Sorry, could not find anything relevant.'
+
+actions:
+ - utter_help
+ - utter_ask_departure
+ - utter_ask_destination
+ - utter_ask_date
+ - utter_ask_name
+ - utter_ask_mobile
+ - utter_ask_id_number
+ - utter_ask_connecting
+ - utter_goodbye
+ - action_book_ticket
+ - action_show_ticket
+ - utter_ask_row
+ - utter_ask_anything_else
+ - action_default_fallback
+ - utter_default
+ - action_renew

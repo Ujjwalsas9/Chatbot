@@ -1,0 +1,21 @@
+Develop a chatbot that handles the following use cases for Flight Booking System. 
+Use Case : Ticket Booking 
+1. Customer requests for booking
+2. Get all necessary details conversationally. i.e. Respond back asking Departure and Destination and begin the conversation.
+3. Get Date of travel. Once you get Departure, Destination and Date of Travel list the matching flight information from the json file(attached). Let's ignore the timings for simplicity purpose. Allow users to get list of flights between dates too.
+4. Allow filtration on the result conversationally. For example, User can ask for direct flights - In this case, list all flights in the criteria with Connection:false. User can ask for cheaper flights - You can list all flights in the criteria with Connection:true. Similarly, When user asks for Fastest flight, then return all flights in the criteria with Connection:false.
+5. Once user selects a flight, the proceed with the conversation to book the tickets.
+6. Check the Json file(attached) and respond back saying your booking is accepted or no ticket available if nothing is matched.
+7. Get basic details like Name, Mobile, Any one ID number(accept integers above 6 digit in length). 
+8. Return any one of the integer booking reference number given in json file for that matching flight.
+
+General Cases:
+1. Greet the user initally and close chat by saying bye. 
+2. When getting basic details for Use Case, try to mimic form submission behavior. i.e once the bot asks the first question for Name and when user tries to do chit chat or changes the conversation context then respond approriately like "please input the requires details to proceed further" until we get all required details. Reply a validation message of your choice when validation on input fails.
+3. After greet, when user tries to ask any other question apart from the above 2 use case, then respond by saying "Sorry, my knowledge is limited only to Flight Booking and Cancellation".
+4. You can add more examples to json file if required.
+
+Notes:
+1. Choose any Open Source chatbot framework and NLP library of your choice.
+2. The code should be shared to us on either in email or GitHub repo with all requirements. 
+3. Steps to run the code.
