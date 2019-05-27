@@ -3,9 +3,9 @@ A chatbot using Rasa framework has been built. It is an assignment chabot projec
 Here, I was facing some issues with importing JSON data into rasa, mainly due to some version issues. So, I have imported json file to Postgresql and then I have fetched relevant information from Postgresql. 
 Due to time limitation, I could not implement it on Flask but I can do it. Other issue is that, I have excluded some of the requirements from this chatbot like: giving options to the users to opt for cheaper/faster way, date range, etc.
 Now, it can only process/ answer questions if it has departure airport, destination airport and date of departure available.
-I have not added excetion handling as well. These all are the issues which could be handled given more time. But, since I am busy on weekdays with my current organization's workload so I could do only this much. 
-Please feel free to reach me if you have any doubts.
-We can definitely make it robust, like it would handle date in any format, it ask for user details before confirmation, it may ask for payment methods and details, etc.
+I have not added exception handling as well. These all are the issues which could be handled given I have more time. But, since I am busy on weekdays with my current organization's workload so I could do only this much. 
+Please feel free to reach out to me if you have any doubts.
+We can definitely make it robust, like it would handle date in any format, it may ask for user details before confirmation, it may ask for payment methods and details, etc.
 I have also shared a screenshot of postgresql console where I have shown how I have stored it there ('DataStoredInPostgres.png').
 
 ### Example Conversation
